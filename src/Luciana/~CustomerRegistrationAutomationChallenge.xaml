@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="CustomerRegistrationAutomationChallenge" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1036,1183.2" sap2010:WorkflowViewState.IdRef="CustomerRegistrationAutomationChallenge_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="CustomerRegistrationAutomationChallenge" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1036,1083.2" sap2010:WorkflowViewState.IdRef="CustomerRegistrationAutomationChallenge_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="56">
       <x:String>System.Activities</x:String>
@@ -67,7 +67,7 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CustomerRegistrationAutomationChallenge" sap:VirtualizedContainerService.HintSize="556.8,1018.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CustomerRegistrationAutomationChallenge" sap:VirtualizedContainerService.HintSize="556.8,918.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="customersDT" />
     </Sequence.Variables>
@@ -125,13 +125,27 @@
                     </sap:WorkflowViewStateService.ViewState>
                     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke FillinFieldsAutomationChallenge workflow" sap:VirtualizedContainerService.HintSize="348.8,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Luciana\FillinFieldsAutomationChallenge.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
-                        <InArgument x:TypeArguments="x:String" x:Key="address">[customer(”Address”).toString]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="email">[customer(”Email”).toString]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="roleInCompany">[customer(”Role in Company”).toString]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="firstName">[customer(”First Name”).toString]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="lastName">[customer(”Last Name”).toString]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="companyName">[customer(”Company Name”).toString]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="phoneNumber">[customer(”Phone Number”).toString]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="address">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="customer(”Address”).toString" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="email">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="customer(”Email”).toString" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="roleInCompany">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="customer(”Role in Company”).toString" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="firstName">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="customer(”First Name”).toString" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="lastName">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="customer(”Last Name”).toString" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="companyName">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="customer(”Company Name”).toString" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="phoneNumber">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="customer(”Phone Number”).toString" />
+                        </InArgument>
                       </ui:InvokeWorkflowFile.Arguments>
                     </ui:InvokeWorkflowFile>
                   </Sequence>
@@ -142,6 +156,5 @@
         </ActivityAction>
       </ui:OpenBrowser.Body>
     </ui:OpenBrowser>
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="515.2,60" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[”All customers are registered”]" />
   </Sequence>
 </Activity>
